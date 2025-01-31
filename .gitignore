@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+# Added by Ivan Lee - 30 Jan 2025
+*.csv
+.ipynb_checkpoints/
+
 # C extensions
 *.so
 
