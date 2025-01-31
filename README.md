@@ -5,7 +5,6 @@
 ### Author
 Name: Ivan Lee
 
-
 ### Data Source
 * Link: https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics
 * The data is sourced from the BC Data Catalogue. This catalogue is the primary location for B.C. Government data, applications, and web services. Government ministries and many broader public sector agencies publish their data resources in the Catalogue. The data in the catalogue can be used to make informed decisions and create opportunities for the benefit of all British Columbians.
@@ -13,8 +12,11 @@ Name: Ivan Lee
 ### Overview
 * The data comprises British Columbia Public School Teacher Statistics, including all data used in public reports up to 2023/2024. It provides insights into various aspects of the educational workforce, including headcount, gender distribution, and other demographic factors.
 
-### Licence
-* Open Government Licence - British Columbia
+### License for GitHub Deliverables
+* This project is licensed under the **MIT License** - see the LICENSE file for details.
+
+### License for Data Source
+* The data is provided under the **Open Government License - British Columbia**. This license allows for the use, modification, and redistribution of the data, provided that appropriate credit is given.
 
 ### Original Data Contacts
 * Name: Education Analytics Office
@@ -35,17 +37,17 @@ Name: Ivan Lee
 
 ### File Structure
 
-data: Contains the source and cleaned data
-data/raw: Contains the CSV files with raw data.
-data/cleaned: Contains the CSV files with cleaned data.
+- data: Contains the source and cleaned data
+-- data/raw: Contains the CSV files with raw data.
+-- data/cleaned: Contains the CSV files with cleaned data.
 
 
-analysis: Contains scripts and notebooks for data analysis. 
-analysis/html: Contains the output HTML file
-analysis/md: Contains the markdown (MD) related files
-analysis/notebook: Contains the jupyter file
+- analysis: Contains scripts and notebooks for data analysis. 
+-- analysis/html: Contains the output HTML file
+-- analysis/md: Contains the markdown (MD) related files
+-- analysis/notebook: Contains the jupyter file
 
-visualization/: Contains the visual representation of data insights
+- visualization/: Contains the visual representation of data insights
 
 
 ### Usage
@@ -57,8 +59,7 @@ To explore the datasets and analyses, it provides:
 
 * __Academic Studies__: Provide a foundation for academic research related to teacher demographics, retention rates, and student outcomes, contributing to the broader field of education studies.
 
-### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 ### Acknowledgments
 British Columbia Ministry of Education for providing the data via BC Data Catalogue.
