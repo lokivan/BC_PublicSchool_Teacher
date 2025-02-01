@@ -42,6 +42,7 @@ import numpy as np
 
 
 
+
 pandas.set_option('display.max_rows', None)  # Show all rows
 pandas.set_option('display.max_columns', None)  # Show all columns
 
@@ -50,7 +51,7 @@ pandas.set_option('display.max_columns', None)  # Show all columns
 
 # Import the CSV file as a pandas DataFrame
 # the source data is located in data/raw folder
-df = pandas.read_csv('data/raw/bc_education_workforce_public_schools_2013_14_to_2023_24.csv')
+df = pandas.read_csv('../../data/raw/bc_education_workforce_public_schools_2013_14_to_2023_24.csv')
 ```
 
 #### Summary of the data
@@ -174,7 +175,7 @@ plt.boxplot(df_new['HEADCOUNT'])
 plt.title('Boxplot of HEADCOUNT')
 plt.ylabel('Headcount')
 
-plt.savefig('visualization/boxplot_headcount.png', format='png', dpi=300) 
+plt.savefig('../../visualization/boxplot_headcount.png', format='png', dpi=300) 
 plt.show()
 
 
@@ -183,7 +184,7 @@ plt.boxplot(df_new['FTE_VALUE'])
 plt.title('Boxplot of FTE_VALUE')
 plt.ylabel('FTE_VALUE')
 
-plt.savefig('visualization/boxplot_FTE_VALUE.png', format='png', dpi=300) 
+plt.savefig('../../visualization/boxplot_FTE_VALUE.png', format='png', dpi=300) 
 plt.show()
 
 
@@ -192,7 +193,7 @@ plt.boxplot(df_new['AVERAGE_AGE'])
 plt.title('Boxplot of AVERAGE_AGE')
 plt.ylabel('AVERAGE_AGE')
 
-plt.savefig('visualization/boxplot_AVERAGE_AGE.png', format='png', dpi=300) 
+plt.savefig('../../visualization/boxplot_AVERAGE_AGE.png', format='png', dpi=300) 
 plt.show()
 
 
@@ -201,7 +202,7 @@ plt.boxplot(df_new['AVERAGE_ANNUAL_SALARY_PER_FTE'])
 plt.title('Boxplot of AVERAGE_ANNUAL_SALARY_PER_FTE')
 plt.ylabel('AVERAGE_ANNUAL_SALARY_PER_FTE')
 
-plt.savefig('visualization/boxplot_AVERAGE_ANNUAL_SALARY_PER_FTE.png', format='png', dpi=300) 
+plt.savefig('../../visualization/boxplot_AVERAGE_ANNUAL_SALARY_PER_FTE.png', format='png', dpi=300) 
 plt.show()
 
 
@@ -286,8 +287,10 @@ filtered_df =df_new.query("GENDER !='All'")
 filtered_df = filtered_df.copy()
 
 
+print ("Number to total records: ", filtered_df.shape[0])
 
 filtered_df['HEADCOUNT'], headcount_outliers = count_outliers(filtered_df['HEADCOUNT'], False)
+
 print("")
 print("")
 print("Total Number of Outliers - HEADCOUNT:",headcount_outliers  )
@@ -313,6 +316,7 @@ print("Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE:",salary_outlier
 
 ```
 
+    Number to total records:  6689
     
     
     Total Number of Outliers - HEADCOUNT: 775
@@ -396,7 +400,7 @@ plt.ylabel('Total Headcount')
 plt.xticks(rotation=45)
 
 # Save the graph into visualization folder
-plt.savefig('visualization/linechart.png', format='png', dpi=300) 
+plt.savefig('../../visualization/linechart.png', format='png', dpi=300) 
 plt.show()
 
 ```
@@ -439,7 +443,7 @@ plt.grid(True)
 plt.xticks(rotation=45)
 
 # Save the graph into visualization folder
-plt.savefig('visualization/barchart.png', format='png', dpi=300) 
+plt.savefig('../../visualization/barchart.png', format='png', dpi=300) 
 plt.show()
 ```
 
@@ -471,7 +475,7 @@ ax.set_title('Employee Headcount by Gender and Category')
 plt.gca().yaxis.set_major_formatter(FuncFormatter(lambda x, _: int(x)))
 
 # Save the graph into the visualization folder
-plt.savefig('visualization/stackbar.png', format='png', dpi=300) 
+plt.savefig('../../visualization/stackbar.png', format='png', dpi=300) 
 plt.show()
 
 
@@ -659,7 +663,9 @@ print(df_district)
 ```python
 
 # Export the cleaned data 
-df_new_clean.to_csv('data/cleaned/bc_education_workforce_public_schools_2013_14_to_2023_24_clean.csv', index=False)
+df_new_clean.to_csv('../../data/cleaned/bc_education_workforce_public_schools_2013_14_to_2023_24_clean.csv', index=False)
+
+
 
 ```
 
