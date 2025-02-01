@@ -36,18 +36,19 @@ Name: Ivan Lee
 * The analysis aims to provide a comprehensive understanding of the trends and changes within the BC education workforce over the specified period. It will help identify patterns in workforce demographics, inform planning and resource allocation, and contribute to discussions around equity and representation in the education system.
 
 ### File Structure
+The following is the file structure in GitHub:
 
-- data: Contains the source and cleaned data
--- data/raw: Contains the CSV files with raw data.
--- data/cleaned: Contains the CSV files with cleaned data.
+* data: Contains the source and cleaned data
+	* data/raw: Contains the CSV files with raw data.
+	* data/cleaned: Contains the CSV files with cleaned data.
 
 
-- analysis: Contains scripts and notebooks for data analysis. 
--- analysis/html: Contains the output HTML file
--- analysis/md: Contains the markdown (MD) related files
--- analysis/notebook: Contains the jupyter file
+* analysis: Contains scripts and notebooks for data analysis. 
+	* analysis/html: Contains the output HTML file
+	* analysis/md: Contains the markdown (MD) related files
+	* analysis/notebook: Contains the jupyter file
 
-- visualization/: Contains the visual representation of data insights
+* visualization/: Contains the visual representation of data insights
 
 
 ### Usage
