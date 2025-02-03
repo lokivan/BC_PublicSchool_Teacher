@@ -1,15 +1,17 @@
-# Assignment 3: A baby project
+# Assignment 3: A baby project (Britch Columbia Public School Teacher Statistics)
 
 ### Author: Lee Kai Lok (Set 4J)
 
 _Date: 24 Jan 2025_
 
 
-##### Data Source:
+#### Data Source
 https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics
 
 * The data is sourced from the BC Data Catalogue. 
 * The data comprises __British Columbia Public School Teacher Statistics__ , including all data used in public reports up to 2023/2024.
+* Comprehensive reports that outline the workforce statistics, including breakdowns by school year, gender, and other demographic variables.
+* Data Tables: Structured datasets available in CSV format that provide detailed statistics for each school year within the specified range.
 * It provides insights into various aspects of the educational workforce, including headcount, gender distribution, and other demographic factors. It includes the following attributes:
 
 1. Data Level
@@ -24,7 +26,13 @@ https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics
 10. AVERAGE_AGE
 11. AVERAGE_ANNUAL_SALARY_PER_FTE
 
-##### Import the source file
+#### Data Range
+* The data covers the following academic years, with Q1 and Q3 summarized data from 2013 to 2024.
+
+#### Purpose of the Analysis
+* The analysis aims to provide a comprehensive understanding of the trends and changes within the BC education workforce over the specified period. It will help identify patterns in workforce demographics, inform planning and resource allocation, and contribute to discussions around equity and representation in the education system.
+
+#### Import the source file
 
 
 ```python
@@ -63,19 +71,22 @@ print ("There are: ", df.shape[0], " rows and ", df.shape[1], " columns")
 print ("")
 
 # Generate all descriptive statistics. (Round in 2 dec. places)
+print("")
+print("The following is all descriptive statistics")
 print(df.describe(include="all").round(2))
 
 
-df.head(4)
-
-
 # Display the data type in each columns
+print("")
+print("The following is the data types of all attributes")
 df.dtypes
 
 ```
 
     There are:  11523  rows and  11  columns
     
+    
+    The following is all descriptive statistics
                 Data Level SCHOOL_YEAR REPORTING_PERIOD DISTRICT_NUMBER  \
     count            11523       11523            11523           11523   
     unique               2          11                2              61   
@@ -93,6 +104,8 @@ df.dtypes
     unique          23                          9078  
     top             44                           Msk  
     freq          1799                          1133  
+    
+    The following is the data types of all attributes
     
 
 
@@ -116,7 +129,6 @@ df.dtypes
 
 ```python
 # Count the number of figures are masked
-
 print("No. of Records were marked:", df.query("HEADCOUNT=='Msk'").shape[0])
 # 1133 records are masked. 
 
@@ -135,11 +147,17 @@ df_new["AVERAGE_ANNUAL_SALARY_PER_FTE"] =  pandas.to_numeric(df_new['AVERAGE_ANN
 
 
 # Check the latest data type in each column
+
+print("")
+print("The following is the updated data types of all attributes")
+
 df_new.dtypes
 
 ```
 
     No. of Records were marked: 1133
+    
+    The following is the updated data types of all attributes
     
 
 
@@ -162,7 +180,7 @@ df_new.dtypes
 
 #### Data Quality Check - The outliers
 
-* Boxplot Diagram
+* By Boxplot Diagram
 
 
 ```python
@@ -170,38 +188,39 @@ df_new.dtypes
 
 # Create a boxplot for 4 numeric attributes: Headcount, FTE Values, Average Age, and Average Annual Salary Per FTE
 
+# Check the outliers - HEADCOUNT
 plt.figure(figsize=(8, 6))
 plt.boxplot(df_new['HEADCOUNT'])
 plt.title('Boxplot of HEADCOUNT')
 plt.ylabel('Headcount')
-
+# Export the graphical presentation into visualization folder 
 plt.savefig('../../visualization/boxplot_headcount.png', format='png', dpi=300) 
 plt.show()
 
-
+# Check the outliers - FTE Value
 plt.figure(figsize=(8, 6))
 plt.boxplot(df_new['FTE_VALUE'])
 plt.title('Boxplot of FTE_VALUE')
 plt.ylabel('FTE_VALUE')
-
+# Export the graphical presentation into visualization folder 
 plt.savefig('../../visualization/boxplot_FTE_VALUE.png', format='png', dpi=300) 
 plt.show()
 
-
+# Check the outliers - Average Age
 plt.figure(figsize=(8, 6))
 plt.boxplot(df_new['AVERAGE_AGE'])
 plt.title('Boxplot of AVERAGE_AGE')
 plt.ylabel('AVERAGE_AGE')
-
+# Export the graphical presentation into visualization folder 
 plt.savefig('../../visualization/boxplot_AVERAGE_AGE.png', format='png', dpi=300) 
 plt.show()
 
-
+# Check the outliers - Annual Salary Per FTE
 plt.figure(figsize=(8, 6))
 plt.boxplot(df_new['AVERAGE_ANNUAL_SALARY_PER_FTE'])
 plt.title('Boxplot of AVERAGE_ANNUAL_SALARY_PER_FTE')
 plt.ylabel('AVERAGE_ANNUAL_SALARY_PER_FTE')
-
+# Export the graphical presentation into visualization folder 
 plt.savefig('../../visualization/boxplot_AVERAGE_ANNUAL_SALARY_PER_FTE.png', format='png', dpi=300) 
 plt.show()
 
@@ -239,16 +258,10 @@ plt.show()
 
 ```python
 # This is the function to calculate the no. of outliers
-
 def count_outliers(feature, chatty=True):
 
-    # Clean the column of non-numeric stuff
-    #feat = feature.apply(clean_numbers)
     feat = feature
-    #if chatty:
-    #    print(feat)
-
-    # Calculate the Interquartile Range (IQR)
+    # Calculate Q1, Q3, IQR, lower bound / upper bound values
     Q1 = feat.quantile(0.25)
     Q3 = feat.quantile(0.75)
     IQR = Q3 - Q1
@@ -286,28 +299,31 @@ filtered_df =df_new.query("GENDER !='All'")
 
 filtered_df = filtered_df.copy()
 
-
+# Count no. of records in the data set
 print ("Number to total records: ", filtered_df.shape[0])
 
+
+# Count and Display the number of outliers in the attribute - HEADCOUNT
 filtered_df['HEADCOUNT'], headcount_outliers = count_outliers(filtered_df['HEADCOUNT'], False)
 
 print("")
 print("")
 print("Total Number of Outliers - HEADCOUNT:",headcount_outliers  )
 
-
+# Count and Display the number of outliers in the attribute - AVERAGE AGE
 filtered_df['AVERAGE_AGE'], age_outliers = count_outliers(filtered_df['AVERAGE_AGE'], False)
 print("")
 print("")
 print("Total Number of Outliers - AVERAGE_AGE:",age_outliers  )
 
 
-
+# Count and Display the number of outliers in the attribute - FTE Value
 filtered_df['FTE_VALUE'], fte_outliers = count_outliers(filtered_df['FTE_VALUE'], False)
 print("")
 print("")
 print("Total Number of Outliers - FTE_VALUE:",fte_outliers  )
 
+# Count and Display the number of outliers in the attribute - Average annual salary per fte
 filtered_df['AVERAGE_ANNUAL_SALARY_PER_FTE'], salary_outliers = count_outliers(filtered_df['AVERAGE_ANNUAL_SALARY_PER_FTE'], False)
 print("")
 print("")
@@ -369,6 +385,17 @@ print("No. of Records were marked (after data clean):", df_new_clean.query("HEAD
     No. of Records were marked (after data clean): 0
     
 
+### Usage
+To explore the datasets and analyses, it provides: 
+
+* __Informed Workforce Planning__: The analysis provides insights into teacher demographics and trends, enabling effective workforce planning and resource allocation to address staffing needs in particular districts 
+
+* __Promotion of Equity and Diversity__: By examining gender distribution and other demographic factors in each district, the findings can guide initiatives aimed at enhancing equity and representation within the teaching workforce. For instance, the data reveals that the number of female teachers is significantly larger than that of male teachers across all three types of occupations over the past years. This insight could inform policies that encourage more male candidates to consider careers in education, helping to balance gender representation in the workforce.
+
+* __Academic Studies__: Provide a foundation for academic research related to teacher demographics, retention rates, and student outcomes, contributing to the broader field of education studies.
+
+
+
 #### Data Visualization - Graph
 
 ##### Graph 1 - Line Graph 
@@ -407,7 +434,7 @@ plt.show()
 
 
     
-![png](output_16_0.png)
+![png](output_17_0.png)
     
 
 
@@ -449,7 +476,7 @@ plt.show()
 
 
     
-![png](output_18_0.png)
+![png](output_19_0.png)
     
 
 
@@ -484,7 +511,7 @@ plt.show()
 
 
     
-![png](output_20_0.png)
+![png](output_21_0.png)
     
 
 

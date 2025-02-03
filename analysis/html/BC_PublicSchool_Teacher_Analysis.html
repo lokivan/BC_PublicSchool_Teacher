@@ -7516,7 +7516,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Assignment-3:-A-baby-project">Assignment 3: A baby project<a class="anchor-link" href="#Assignment-3:-A-baby-project">¶</a></h1><h3 id="Author:-Lee-Kai-Lok-(Set-4J)">Author: Lee Kai Lok (Set 4J)<a class="anchor-link" href="#Author:-Lee-Kai-Lok-(Set-4J)">¶</a></h3><p><em>Date: 24 Jan 2025</em></p>
+<h1 id="Assignment-3:-A-baby-project-(Britch-Columbia-Public-School-Teacher-Statistics)">Assignment 3: A baby project (Britch Columbia Public School Teacher Statistics)<a class="anchor-link" href="#Assignment-3:-A-baby-project-(Britch-Columbia-Public-School-Teacher-Statistics)">¶</a></h1><h3 id="Author:-Lee-Kai-Lok-(Set-4J)">Author: Lee Kai Lok (Set 4J)<a class="anchor-link" href="#Author:-Lee-Kai-Lok-(Set-4J)">¶</a></h3><p><em>Date: 24 Jan 2025</em></p>
 </div>
 </div>
 </div>
@@ -7527,10 +7527,12 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h5 id="Data-Source:">Data Source:<a class="anchor-link" href="#Data-Source:">¶</a></h5><p><a href="https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics">https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics</a></p>
+<h4 id="Data-Source">Data Source<a class="anchor-link" href="#Data-Source">¶</a></h4><p><a href="https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics">https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics</a></p>
 <ul>
 <li>The data is sourced from the BC Data Catalogue.</li>
 <li>The data comprises <strong>British Columbia Public School Teacher Statistics</strong> , including all data used in public reports up to 2023/2024.</li>
+<li>Comprehensive reports that outline the workforce statistics, including breakdowns by school year, gender, and other demographic variables.</li>
+<li>Data Tables: Structured datasets available in CSV format that provide detailed statistics for each school year within the specified range.</li>
 <li>It provides insights into various aspects of the educational workforce, including headcount, gender distribution, and other demographic factors. It includes the following attributes:</li>
 </ul>
 <ol>
@@ -7546,6 +7548,12 @@ a.anchor-link {
 <li>AVERAGE_AGE</li>
 <li>AVERAGE_ANNUAL_SALARY_PER_FTE</li>
 </ol>
+<h4 id="Data-Range">Data Range<a class="anchor-link" href="#Data-Range">¶</a></h4><ul>
+<li>The data covers the following academic years, with Q1 and Q3 summarized data from 2013 to 2024.</li>
+</ul>
+<h4 id="Purpose-of-the-Analysis">Purpose of the Analysis<a class="anchor-link" href="#Purpose-of-the-Analysis">¶</a></h4><ul>
+<li>The analysis aims to provide a comprehensive understanding of the trends and changes within the BC education workforce over the specified period. It will help identify patterns in workforce demographics, inform planning and resource allocation, and contribute to discussions around equity and representation in the education system.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7556,7 +7564,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h5 id="Import-the-source-file">Import the source file<a class="anchor-link" href="#Import-the-source-file">¶</a></h5>
+<h4 id="Import-the-source-file">Import the source file<a class="anchor-link" href="#Import-the-source-file">¶</a></h4>
 </div>
 </div>
 </div>
@@ -7621,13 +7629,14 @@ a.anchor-link {
 <span class="nb">print</span> <span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 
 <span class="c1"># Generate all descriptive statistics. (Round in 2 dec. places)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The following is all descriptive statistics"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">"all"</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 
 
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-
 <span class="c1"># Display the data type in each columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The following is the data types of all attributes"</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
@@ -7643,6 +7652,8 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>There are:  11523  rows and  11  columns
 
+
+The following is all descriptive statistics
             Data Level SCHOOL_YEAR REPORTING_PERIOD DISTRICT_NUMBER  \
 count            11523       11523            11523           11523   
 unique               2          11                2              61   
@@ -7660,6 +7671,8 @@ count        11523                         11523
 unique          23                          9078  
 top             44                           Msk  
 freq          1799                          1133  
+
+The following is the data types of all attributes
 </pre>
 </div>
 </div>
@@ -7691,7 +7704,6 @@ dtype: object</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Count the number of figures are masked</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s2">"No. of Records were marked:"</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"HEADCOUNT=='Msk'"</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="c1"># 1133 records are masked. </span>
 
@@ -7710,6 +7722,10 @@ dtype: object</pre>
 
 
 <span class="c1"># Check the latest data type in each column</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The following is the updated data types of all attributes"</span><span class="p">)</span>
+
 <span class="n">df_new</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
@@ -7724,6 +7740,8 @@ dtype: object</pre>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>No. of Records were marked: 1133
+
+The following is the updated data types of all attributes
 </pre>
 </div>
 </div>
@@ -7754,7 +7772,7 @@ dtype: object</pre>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h4 id="Data-Quality-Check---The-outliers">Data Quality Check - The outliers<a class="anchor-link" href="#Data-Quality-Check---The-outliers">¶</a></h4><ul>
-<li>Boxplot Diagram</li>
+<li>By Boxplot Diagram</li>
 </ul>
 </div>
 </div>
@@ -7769,38 +7787,39 @@ dtype: object</pre>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a boxplot for 4 numeric attributes: Headcount, FTE Values, Average Age, and Average Annual Salary Per FTE</span>
 
+<span class="c1"># Check the outliers - HEADCOUNT</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">'HEADCOUNT'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Boxplot of HEADCOUNT'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Headcount'</span><span class="p">)</span>
-
+<span class="c1"># Export the graphical presentation into visualization folder </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'../../visualization/boxplot_headcount.png'</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-
+<span class="c1"># Check the outliers - FTE Value</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">'FTE_VALUE'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Boxplot of FTE_VALUE'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'FTE_VALUE'</span><span class="p">)</span>
-
+<span class="c1"># Export the graphical presentation into visualization folder </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'../../visualization/boxplot_FTE_VALUE.png'</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-
+<span class="c1"># Check the outliers - Average Age</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">'AVERAGE_AGE'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Boxplot of AVERAGE_AGE'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'AVERAGE_AGE'</span><span class="p">)</span>
-
+<span class="c1"># Export the graphical presentation into visualization folder </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'../../visualization/boxplot_AVERAGE_AGE.png'</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-
+<span class="c1"># Check the outliers - Annual Salary Per FTE</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">'AVERAGE_ANNUAL_SALARY_PER_FTE'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Boxplot of AVERAGE_ANNUAL_SALARY_PER_FTE'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'AVERAGE_ANNUAL_SALARY_PER_FTE'</span><span class="p">)</span>
-
+<span class="c1"># Export the graphical presentation into visualization folder </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'../../visualization/boxplot_AVERAGE_ANNUAL_SALARY_PER_FTE.png'</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -7860,16 +7879,10 @@ dtype: object</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This is the function to calculate the no. of outliers</span>
-
 <span class="k">def</span> <span class="nf">count_outliers</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">chatty</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
-    <span class="c1"># Clean the column of non-numeric stuff</span>
-    <span class="c1">#feat = feature.apply(clean_numbers)</span>
     <span class="n">feat</span> <span class="o">=</span> <span class="n">feature</span>
-    <span class="c1">#if chatty:</span>
-    <span class="c1">#    print(feat)</span>
-
-    <span class="c1"># Calculate the Interquartile Range (IQR)</span>
+    <span class="c1"># Calculate Q1, Q3, IQR, lower bound / upper bound values</span>
     <span class="n">Q1</span> <span class="o">=</span> <span class="n">feat</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
     <span class="n">Q3</span> <span class="o">=</span> <span class="n">feat</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
     <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
@@ -7916,28 +7929,31 @@ dtype: object</pre>
 
 <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-
+<span class="c1"># Count no. of records in the data set</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">"Number to total records: "</span><span class="p">,</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
+
+<span class="c1"># Count and Display the number of outliers in the attribute - HEADCOUNT</span>
 <span class="n">filtered_df</span><span class="p">[</span><span class="s1">'HEADCOUNT'</span><span class="p">],</span> <span class="n">headcount_outliers</span> <span class="o">=</span> <span class="n">count_outliers</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">'HEADCOUNT'</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Total Number of Outliers - HEADCOUNT:"</span><span class="p">,</span><span class="n">headcount_outliers</span>  <span class="p">)</span>
 
-
+<span class="c1"># Count and Display the number of outliers in the attribute - AVERAGE AGE</span>
 <span class="n">filtered_df</span><span class="p">[</span><span class="s1">'AVERAGE_AGE'</span><span class="p">],</span> <span class="n">age_outliers</span> <span class="o">=</span> <span class="n">count_outliers</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">'AVERAGE_AGE'</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Total Number of Outliers - AVERAGE_AGE:"</span><span class="p">,</span><span class="n">age_outliers</span>  <span class="p">)</span>
 
 
-
+<span class="c1"># Count and Display the number of outliers in the attribute - FTE Value</span>
 <span class="n">filtered_df</span><span class="p">[</span><span class="s1">'FTE_VALUE'</span><span class="p">],</span> <span class="n">fte_outliers</span> <span class="o">=</span> <span class="n">count_outliers</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">'FTE_VALUE'</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Total Number of Outliers - FTE_VALUE:"</span><span class="p">,</span><span class="n">fte_outliers</span>  <span class="p">)</span>
 
+<span class="c1"># Count and Display the number of outliers in the attribute - Average annual salary per fte</span>
 <span class="n">filtered_df</span><span class="p">[</span><span class="s1">'AVERAGE_ANNUAL_SALARY_PER_FTE'</span><span class="p">],</span> <span class="n">salary_outliers</span> <span class="o">=</span> <span class="n">count_outliers</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">'AVERAGE_ANNUAL_SALARY_PER_FTE'</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
@@ -8039,6 +8055,25 @@ Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE: 262
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=968ee0e4-908b-4920-93c6-7a68fac6ba77">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Usage">Usage<a class="anchor-link" href="#Usage">¶</a></h3><p>To explore the datasets and analyses, it provides:</p>
+<ul>
+<li><p><strong>Informed Workforce Planning</strong>: The analysis provides insights into teacher demographics and trends, enabling effective workforce planning and resource allocation to address staffing needs in particular districts</p>
+</li>
+<li><p><strong>Promotion of Equity and Diversity</strong>: By examining gender distribution and other demographic factors in each district, the findings can guide initiatives aimed at enhancing equity and representation within the teaching workforce. For instance, the data reveals that the number of female teachers is significantly larger than that of male teachers across all three types of occupations over the past years. This insight could inform policies that encourage more male candidates to consider careers in education, helping to balance gender representation in the workforce.</p>
+</li>
+<li><p><strong>Academic Studies</strong>: Provide a foundation for academic research related to teacher demographics, retention rates, and student outcomes, contributing to the broader field of education studies.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aa07a59f-4f06-4cce-a9b8-50231b53a311">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8068,7 +8103,7 @@ Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE: 262
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Graph 1 - Line Graph</span>
@@ -8129,7 +8164,7 @@ Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE: 262
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Graph 2 - Column Graph</span>
@@ -8194,7 +8229,7 @@ Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE: 262
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Graph 3 - Stacked Column Graph </span>
@@ -8260,7 +8295,7 @@ Total Number of Outliers - AVERAGE_ANNUAL_SALARY_PER_FTE: 262
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Summary 1</span>
@@ -8373,7 +8408,7 @@ SCHOOL_YEAR REPORTING_PERIOD EMPLOYMENT_CATEGORY
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Summary 2 </span>
@@ -8477,7 +8512,7 @@ Name: HEADCOUNT, dtype: float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Export the cleaned data </span>
