@@ -5,12 +5,17 @@
 ### Author
 Name: Ivan Lee
 
-### Data Source
+### Data Source 1
 * Link: https://catalogue.data.gov.bc.ca/dataset/bc-schools-teacher-statistics
 * The data is sourced from the BC Data Catalogue. This catalogue is the primary location for B.C. Government data, applications, and web services. Government ministries and many broader public sector agencies publish their data resources in the Catalogue. The data in the catalogue can be used to make informed decisions and create opportunities for the benefit of all British Columbians.
-  
+
+### Data Source 2
+* Link: https://open.canada.ca/data/en/dataset/87bda664-6d2f-43df-bdd4-9b150d60d67a
+* This data source includes school district office information. 
+ 
 ### Overview
-* The data comprises British Columbia Public School Teacher Statistics, including all data used in public reports up to 2023/2024. It provides insights into various aspects of the educational workforce, including headcount, gender distribution, and other demographic factors.
+* (1) The data comprises British Columbia Public School Teacher Statistics, including all data used in public reports up to 2023/2024. It provides insights into various aspects of the educational workforce, including headcount, gender distribution, and other demographic factors.
+* (2) Enrich the data set to provide the school district office information in each district. 
 
 ### License for GitHub Deliverables
 * This project is licensed under the **MIT License** - see the LICENSE file for details.
@@ -38,17 +43,21 @@ Name: Ivan Lee
 ### File Structure
 The following is the file structure in GitHub:
 
-* data: Contains the source and cleaned data
-	* data/raw: Contains the CSV files with raw data.
-	* data/cleaned: Contains the CSV files with cleaned data.
+* Data: Contains the source and cleaned data
+	* Data/Raw_Data: Contains the CSV files with raw data.
+	* Data/Clean_Data: Contains the CSV files with cleaned data.
 
 
-* analysis: Contains scripts and notebooks for data analysis. 
-	* analysis/html: Contains the output HTML file
-	* analysis/md: Contains the markdown (MD) related files
-	* analysis/notebook: Contains the jupyter file
+* Scripts: Contains scripts and notebooks for data analysis. 
+	* Scripts/html: Contains the output HTML file
+	* Scripts/md: Contains the markdown (MD) related files
+	* Scripts/notebook: Contains the jupyter file
 
-* visualization/: Contains the visual representation of data insights
+* Results/: Contains the visual representation of the result
+	* Results/FileStructure: Contains the screenshots in local drive of the folder Structure
+	* Results/Visualization: Contains the visual representation of data insights
+	
+* Documents/: Contains the related document of the project. 
 
 
 ### Usage
