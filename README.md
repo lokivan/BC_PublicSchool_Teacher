@@ -46,19 +46,16 @@ Name: Ivan Lee
 
 ### Data Set (Data Source 2)
 * The specific dataset for this analysis includes:
+	* By studying further each district board office center's information, such as their address, postal code, website, and longitude
 
-* Annual Reports: Comprehensive reports that outline the workforce statistics, including breakdowns by school year, gender, and other demographic variables.
-* Data Tables: Structured datasets available in CSV format that provide detailed statistics for each school year within the specified range.
 
 ### Data Range (Data Source 2)
 * The data covers the latest schoool district office as of 2025
 
 ### Purpose of the Analysis (Data Source 2)
-* By studying further each district board office center's information, such as their address, postal code, website, and longitude, stakeholders can achieve several objectives:
-
-	* Informed Decision-Making: Educational policymakers can utilize this information to make better decisions regarding resource allocation and hiring practices.
-	* Improved Communication: Providing contact details enhances communication between school districts, educators, and the community.
-	* Spatial Analysis: Including geographical data enables the visualization of regional disparities in teacher distribution and access to educational 
+* Informed Decision-Making: Educational policymakers can utilize this information to make better decisions regarding resource allocation and hiring practices.
+* Improved Communication: Providing contact details enhances communication between school districts, educators, and the community.
+* Spatial Analysis: Including geographical data enables the visualization of regional disparities in teacher distribution and access to educational 
 
 
 ### License for GitHub Deliverables
@@ -66,8 +63,6 @@ Name: Ivan Lee
 
 ### License for Data Source
 * The data is provided under the **Open Government License - British Columbia**. This license allows for the use, modification, and redistribution of the data, provided that appropriate credit is given.
-
-
 
 
 ### File Structure
