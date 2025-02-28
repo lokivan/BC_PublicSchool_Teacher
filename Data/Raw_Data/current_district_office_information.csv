@@ -1,0 +1,61 @@
+SCHOOL_YEAR,DISTRICT_NUMBER,DISTRICT_NAME,BOARDOFFICE_PHYSICAL_ADDRESS,DISTRICT_CITY,DISTRICT_PROVINCE,DISTRICT_POSTAL_CODE,DISTRICT_PHONE_NUMBER,DISTRICT_WEBSITE,X,Y
+2018/19,5,Southeast Kootenay,940 Industrial Rd  #1,Cranbrook,BC,V1C4C6,250 426-4201,http://www.sd5.bc.ca                                                                                ,-115.7608032,49.5226133
+2018/19,6,Rocky Mountain,620 - 4th St,Invermere,BC,V0A1K0,250 342-9243,http://www.sd6.bc.ca                                                                                ,-116.0278169,50.5107574
+2018/19,8,Kootenay Lake,570 Johnstone Rd,Nelson,BC,V1L6J2,250 352-6681,http://www.sd8.bc.ca                                                                                ,-117.2897037,49.51097505
+2018/19,10,Arrow Lakes,98 Sixth Ave NW,Nakusp,BC,V0G1R0,250 265-3638,http://sd10.bc.ca                                                                                   ,-117.8054872,50.2401509
+2018/19,19,Revelstoke,501 11th St,Revelstoke,BC,V0E2S0,250 837-2101,http://www.sd19.bc.ca                                                                               ,-118.1992192,50.98961564
+2018/19,20,Kootenay-Columbia,2001 Third Ave,Trail,BC,V1R1R6,250 368-6434,http://www.sd20.bc.ca                                                                               ,-117.6936988,49.09749644
+2018/19,22,Vernon,1401 Fifteenth St,Vernon,BC,V1T8S8,250 542-3331,http://www.sd22.bc.ca                                                                               ,-119.2499542,50.25217477
+2018/19,23,Central Okanagan,1040 Hollywood Rd S,Kelowna,BC,V1X4N2,250 860-8888,http://www.sd23.bc.ca                                                                               ,-119.399225,49.87663283
+2018/19,27,Cariboo-Chilcotin,350 Second Ave N,Williams Lake,BC,V2G1Z9,250 398-3800,http://www.sd27.bc.ca                                                                               ,-122.146,52.134
+2018/19,28,Quesnel,401 North Star Rd,Quesnel,BC,V2J5K2,250 992-8802,http://www.sd28.bc.ca                                                                               ,-122.466948,52.98131582
+2018/19,33,Chilliwack,8430 Cessna Dr,Chilliwack,BC,V2P7K4,604 792-1321,http://www.sd33.bc.ca                                                                               ,-121.9454115,49.1556137
+2018/19,34,Abbotsford,2790 Tims St,Abbotsford,BC,V2T4M7,604 859-4891,http://www.sd34.bc.ca                                                                               ,-122.3316427,49.052677
+2018/19,35,Langley,4875 222nd St,Langley,BC,V3A3Z7,604 534-7891,http://www.sd35.bc.ca                                                                               ,-122.608775,49.0909895
+2018/19,36,Surrey,14033 92nd Ave,Surrey,BC,V3V0B7,604 596-7733,http://www.surreyschools.ca                                                                         ,-122.8323789,49.1702678
+2018/19,37,Delta,4585 Harvest Dr,Delta,BC,V4K5B4,604 946-4101,http://www.deltasd.bc.ca                                                                            ,-123.0645526,49.0860948
+2018/19,38,Richmond,7811 Granville Ave,Richmond,BC,V6Y3E3,604 668-6000,http://www.sd38.bc.ca                                                                               ,-123.1395169,49.1630636
+2018/19,39,Vancouver,1580 West Broadway,Vancouver,BC,V6J5K8,604 713-5000,http://www.vsb.bc.ca                                                                                ,-123.1402601,49.2633059
+2018/19,40,New Westminster,811 Ontario St,New Westminster,BC,V3M1C4,604 517-6240,https://newwestschools.ca/                                                                          ,-122.9158454,49.20395816
+2018/19,41,Burnaby,5325 Kincaid St,Burnaby,BC,V5G1W2,604 296-6900,http://burnabyschools.ca/                                                                           ,-122.9869878,49.2488564
+2018/19,42,Maple Ridge-Pitt Meadows,22225 Brown Ave,Maple Ridge,BC,V2X8N6,604 463-4200,http://www.sd42.ca                                                                                  ,-122.605599,49.22217271
+2018/19,43,Coquitlam,550 Poirier St,Coquitlam,BC,V3J6A7,604 939-9201,http://www.sd43.bc.ca                                                                               ,-122.8471631,49.25202042
+2018/19,44,North Vancouver,2121 Lonsdale Ave,North Vancouver,BC,V7M2K6,604 903-3444,http://www.sd44.ca                                                                                  ,-123.0726542,49.329083
+2018/19,45,West Vancouver,1075 21st St,West Vancouver,BC,V7V4A9,604 981-1000,http://westvancouverschools.ca/                                                                     ,-123.1684742,49.33419694
+2018/19,46,Sunshine Coast,494 South Fletcher Rd,Gibsons,BC,V0N1V0,604 886-8811,http://www.sd46.bc.ca                                                                               ,-123.5082879,49.40122428
+2018/19,47,Powell River,4351 Ontario Ave,Powell River,BC,V8A1V3,604 485-6271,http://www.sd47.bc.ca                                                                               ,-124.5154343,49.8337383
+2018/19,48,Sea to Sky,37866 2nd Ave,Squamish,BC,V0N3G0,604 892-5228,http://sd48seatosky.org                                                                             ,-123.1567479,49.6959392
+2018/19,49,Central Coast,1961 Highway 20,Hagensborg,BC,V0T1H0,250 982-2691,http://www.sd49.bc.ca                                                                               ,-126.538529,52.388737
+2018/19,50,Haida Gwaii,107 Third Ave,Queen Charlotte City,BC,V0T1S0,250 559-8471,http://www.sd50.bc.ca                                                                               ,-132.0774057,53.25524836
+2018/19,51,Boundary,1021 Central Ave,Grand Forks,BC,V0H1H0,250 442-8258,http://www.sd51.bc.ca                                                                               ,-118.4481822,49.0313345
+2018/19,52,Prince Rupert,634 Sixth Ave E,Prince Rupert,BC,V8J1X1,250 624-6717,http://www.rupertschools.ca                                                                         ,-130.3107496,54.31728952
+2018/19,53,Okanagan Similkameen,6161 Okanagan St,Oliver,BC,V0H1T0,250 498-3481,http://www.sd53.bc.ca                                                                               ,-119.5531165,49.1821197
+2018/19,54,Bulkley Valley,1235 Montreal St,Smithers,BC,V0J2N0,250 877-6820,http://www.sd54.bc.ca                                                                               ,-127.1816649,54.7893186
+2018/19,57,Prince George,2100 Ferry Ave,Prince George,BC,V2L4R5,250 561-6800,http://www.sd57.bc.ca                                                                               ,-122.7654554,53.8898068
+2018/19,58,Nicola-Similkameen,1550 Chapman St,Merritt,BC,V1K1B8,250 378-5161,http://www.sd58.bc.ca                                                                               ,-120.7946731,50.1087423
+2018/19,59,Peace River South,11600 7 St,Dawson Creek,BC,V1G4R8,250 782-8571,http://www.sd59.bc.ca                                                                               ,-120.2205288,55.7439377
+2018/19,60,Peace River North,10112 105 Ave,Fort St. John,BC,V1J4S4,250 262-6000,http://www.prn.bc.ca                                                                                ,-120.8498782,56.2513037
+2018/19,61,Greater Victoria,556 Boleskine Rd,Victoria,BC,V8Z1E8,250 475-3212,http://www.sd61.bc.ca                                                                               ,-123.3784931,48.4533204
+2018/19,62,Sooke,3143 Jacklin Rd,Victoria,BC,V9B5R1,250 474-9800,http://www.sd62.bc.ca                                                                               ,-123.5132394,48.43650553
+2018/19,63,Saanich,2125 Keating Cross Rd,Saanichton,BC,V8M2A5,250 652-7300,http://www.sd63.bc.ca                                                                               ,-123.4121269,48.5641791
+2018/19,64,Gulf Islands,112 Rainbow Rd,Salt Spring Island,BC,V8K2K3,250 537-5548,http://www.sd64.bc.ca                                                                               ,-123.5010094,48.8544831
+2018/19,67,Okanagan Skaha,425 Jermyn Ave,Penticton,BC,V2A1Z4,250 770-7700,http://www.sd67.bc.ca                                                                               ,-119.5833265,49.4928328
+2018/19,68,Nanaimo-Ladysmith,395 Wakesiah Ave,Nanaimo,BC,V9R3K6,250 754-5521,http://www.sd68.bc.ca                                                                               ,-123.9620771,49.16104077
+2018/19,69,Qualicum,100 Jensen Ave East,Parksville,BC,V9P1A1,250 248-4241,http://www.sd69.bc.ca                                                                               ,-124.3118084,49.3178777
+2018/19,70,Alberni,4690 Roger St,Port Alberni,BC,V9Y3Z4,250 723-3565,http://www.sd70.bc.ca                                                                               ,-124.802165,49.2538928
+2018/19,71,Comox Valley,607 Cumberland Rd,Courtenay,BC,V9N7G5,250 334-5500,http://www.sd71.bc.ca                                                                               ,-125.0011887,49.6871494
+2018/19,72,Campbell River,425 Pinecrest Rd,Campbell River,BC,V9W3P2,250 830-2300,http://www.sd72.bc.ca                                                                               ,-125.2437338,50.0034022
+2018/19,73,Kamloops/Thompson,1383 Ninth Ave,Kamloops,BC,V2C3X7,250 374-0679,http://www.sd73.bc.ca                                                                               ,-120.3187753,50.6655997
+2018/19,74,Gold Trail,400 Hollis Rd,Ashcroft,BC,V0K1A0,250 453-9151,http://www.sd74.bc.ca                                                                               ,-121.266347,50.7316163
+2018/19,75,Mission,33046 Fourth Ave,Mission,BC,V2V1S5,604 826-6286,http://www.mpsd.ca                                                                                  ,-122.3084805,49.1369259
+2018/19,78,Fraser-Cascade,650 Kawkawa Lake Rd,Hope,BC,V0X1L4,604 869-2411,http://www.sd78.bc.ca                                                                               ,-121.4292834,49.37765346
+2018/19,79,Cowichan Valley,2557 Beverly St,Duncan,BC,V9L2X3,250 748-0321,http://www.sd79.bc.ca                                                                               ,-123.6974301,48.7859504
+2018/19,81,Fort Nelson,5104 Airport Dr,Fort Nelson,BC,V0C1R0,250 774-2591,http://www.sd81.bc.ca/                                                                              ,-122.6981018,58.8065575
+2018/19,82,Coast Mountains,3211 Kenney St,Terrace,BC,V8G3E9,250 635-4931,http://www.cmsd.bc.ca                                                                               ,-128.6122867,54.517189
+2018/19,83,North Okanagan-Shuswap,341 Shuswap St SW,Salmon Arm,BC,V1E4H9,250 832-2157,http://www.sd83.bc.ca                                                                               ,-119.2860882,50.69785939
+2018/19,84,Vancouver Island West,2 Highway 28,Gold River,BC,V0P1G0,250 283-2241,http://www.sd84.bc.ca                                                                               ,-126.0512108,49.78300499
+2018/19,85,Vancouver Island North,6975 Rupert St,Port Hardy,BC,V0N2P0,250 949-6618,http://www.sd85.bc.ca                                                                               ,-127.4942432,50.7186714
+2018/19,87,Stikine,5 Commercial Drive,Dease Lake,BC,V0C1L0,250 771-4440,http://www.sd87.bc.ca                                                                               ,-129.9873682,58.4334574
+2018/19,91,Nechako Lakes,153 East Connaught St,Vanderhoof,BC,V0J3A0,250 567-2284,http://www.sd91.bc.ca                                                                               ,-124.0075833,54.01803356
+2018/19,92,Nisga'a,4702 Huwilp,New Aiyansh,BC,V0J1A0,250 633-2228,http://www.nisgaa.bc.ca                                                                             ,-129.0794026,55.2046696
+2018/19,93,Conseil scolaire francophone,100 13511 Commerce Pky,Richmond,BC,V6X2J8,604 214-2600,http://www.csf.bc.ca                                                                                ,-123.0725451,49.173452
