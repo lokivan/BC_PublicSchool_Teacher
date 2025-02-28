@@ -47,6 +47,8 @@ The following is the file structure in GitHub:
 	* Data/Raw_Data: Contains the CSV files with raw data.
 	* Data/Clean_Data: Contains the CSV files with cleaned data.
 
+![File Structure](/Results/FileStructure/FileOverview_1.jpg)
+
 
 * Scripts: Contains scripts and notebooks for data analysis. 
 	* Scripts/html: Contains the output HTML file
@@ -58,6 +60,8 @@ The following is the file structure in GitHub:
 	* Results/Visualization: Contains the visual representation of data insights
 	
 * Documents/: Contains the related document of the project. 
+
+
 
 
 ### Usage
